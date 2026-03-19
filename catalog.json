@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "targets": {
+    "copilot": {
+      "repo": {
+        "agents": ".github/agents",
+        "prompts": ".github/prompts",
+        "skills": ".github/skills",
+        "instructions": ".github/instructions"
+      },
+      "user": {
+        "agents": "~/.copilot/agents",
+        "prompts": "~/.copilot/prompts",
+        "skills": "~/.copilot/skills",
+        "instructions": "~/.copilot/instructions"
+      }
+    },
+    "vscode": {
+      "user": {
+        "agents": "%APPDATA%\\Code\\User\\agents",
+        "prompts": "%APPDATA%\\Code\\User\\prompts",
+        "skills": "%APPDATA%\\Code\\User\\skills",
+        "instructions": "%APPDATA%\\Code\\User\\instructions"
+      }
+    }
+  },
+  "catalog": {
+    "agents": [
+      {
+        "name": "custom-agent-1",
+        "description": "This is a custom agent template meant to demonstrate how to create and structure agents in the catalog.",
+        "source": ".github/agents/custom-agent-1.md",
+        "requires": [
+          "skill:custom-skill-1"
+        ],
+        "tags": [
+          "example",
+          "copilot",
+          "management"
+        ]
+      },
+      {
+        "name": "custom-agent-2",
+        "description": "Another custom agent template with no dependencies, showcasing a different set of tags for categorization.",
+        "source": ".github/agents/custom-agent-2.md",
+        "requires": [],
+        "tags": [
+          "example",
+          "csharp",
+          "architecture",
+          "backend",
+          "frontend",
+          "mobile",
+          "cloud"
+        ]
+      }
+    ],
+    "prompts": [],
+    "skills": [
+      {
+        "name": "custom-skill-1",
+        "description": "An example skill demonstrating how to create and structure skills in the catalog.",
+        "source": ".github/skills/custom-skill-1/SKILL.md",
+        "tags": [
+          "example",
+          "copilot",
+          "skill"
+        ]
+      }
+    ],
+    "instructions": []
+  }
+}
